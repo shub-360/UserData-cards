@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Henny Penny", cursive;
+    background-color: rgb(223, 208, 184);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.heading{
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(34, 40, 49);
+    font-family: "Henny Penny", cursive;
+}
+hr {
+  border: none;
+  border-top: 2px solid #000; /* Black color */
+  margin: 16px 0;
+}
+.description{
+    font-size: 1.1rem;
+}
+.form-section{
+    margin-top: 20px;
+}
+
+/* Form section */
+
+form#userForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+form input[type="text"],
+form input[type="number"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  
+}
+form label {
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color:rgb(57, 62, 70);
+  /* Dark gray background */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+form input[type="checkbox"] {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 20px;
+    accent-color: rgb(57, 62, 70);
+    transition: transform 0.2s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.2s;
+}
+form input[type="checkbox"]:active {
+    transform: scale(1.2) rotate(-10deg);
+    box-shadow: 0 0 8px 2px rgba(57,62,70,0.2);
+}
+form input[type="checkbox"]:checked {
+    animation: checkbox-pop 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes checkbox-pop {
+    0% { transform: scale(1) rotate(0deg);}
+    50% { transform: scale(1.3) rotate(8deg);}
+    70% { transform: scale(0.95) rotate(-6deg);}
+    100% { transform: scale(1) rotate(0deg);}
+}
+
+form button:hover {
+  background-color: rgb(69, 74, 84);
+}
+
+.filter{
+   padding: 10px 20px;
+  background-color:rgb(57, 62, 70);
+  /* Dark gray background */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 20px;
+  width: max-content;
+}
+/* User Grid section */
+
+
+.user-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 20px;
+    row-gap: 30px;
+    margin-top: 2rem;
+    max-width: 1000px;
+  width: 80%;
+}
+/* User Card */
+.user-card {
+    background-color: rgb(57, 62, 70);
+    padding: 20px;
+    border-radius: 8px;
+    
+}
+.user-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.user-card p {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  color:rgb(223, 208, 184)
+}
+
+.user-card button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  background-color: rgb(148, 137, 121);
+  color: rgb(250, 235, 211);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.danger {
+  padding: 10px 20px;
+  background-color:rgb(215, 29, 29);
+  /* Dark gray background */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 20px;
+  width: max-content;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.danger:hover {
+    background-color: darkred;
+}

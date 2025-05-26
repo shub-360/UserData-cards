@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#222831" id="theme-color">
+    <title>UserData</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- All your content here -->
+        <!-- Header -->
+        <header class="heading">
+            <h1>UserData Page</h1>
+            <hr />
+            <p class="description">Manage your user data easily</p>
+            <p class="description">Add or Delete your Data</p>
+        </header>
+
+        <!-- Form -->
+        <section class="form-section">
+            <form id="userForm">
+                <input type="text" class="name" name="username" placeholder="Name" required />
+                <input type="number" class="age" name="age" placeholder="Age" required />
+                <label>
+                    <input type="checkbox" class="auth" /> Authorized
+                </label>
+                <button type="submit">Add User</button>
+            </form>
+
+        </section>
+       <div class="filter user-count">Total Users: 0</div>
+
+        <section class="filter-buttons">
+            <button class="filter" id="showAllBtn">Show All</button>
+            <button class="filter" id="showAuthorizedBtn">Authorized Only</button>
+            <button class="filter" id="showUnauthorizedBtn">Unauthorized Only</button>
+        </section>
+        <!-- Container for User Cards -->
+        <section class="user-grid">
+            <!-- for now there are dummy might delete later so Javascript automatcally inject cards -->
+            <!-- <div class="user-card"></div> -->
+        </section>
+
+    </div>
+    <button id="clearAllBtn" class="filter danger">Clear All Data</button>
+
+
+
+    <!-- JS file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
